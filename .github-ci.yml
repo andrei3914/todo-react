@@ -1,0 +1,25 @@
+name: learning about this stuff
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    #run Lint
+    - npm i
+    - npm run lint
+  format:
+    #run format
+    - npm i
+    - npm run format
+  build:
+    #run build
+    - npm i
+    - npm run build
+  deploy:
+    #run deploy
+    - npm i
+    - npm run predeploy
+    - npm run deploy
